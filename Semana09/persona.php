@@ -1,7 +1,7 @@
 <?php
 class Persona{
     //propiedades
-    private $nombre;
+    protected $nombre;
     public $apellido;
     public $edad;
     
@@ -14,27 +14,7 @@ class Persona{
         
         $this->edad=$edad;
     }
-   
-    function saludar()
-    {
-        echo "<p> hola $this->nombre $this->apellido, tu edad es : $this->edad anios</p>";
-    }
-
-
-
-
-    function rangoEdad($edad)
-    {
-        if($this->edad>=40)
-        return "adulto";
-        else
-        return "menor";
-    }
-
-    function mostrar()
-    {
-        var_dump($this);
-    }
+  
 
     function setNombre($nombre)
     {
@@ -44,17 +24,28 @@ class Persona{
     {
         return $this->nombre;
     }
-
-     function setApellido($apellido)
+/*
+    function mostrarNombre()
     {
-        $this->apellido=$apellido;
+       return $this->nombre;
     }
-    function getApellido()
-    {
-        return $this->apellido;
-    }
-
+*/
 
     
 }
+
+class Docente extends Persona{
+
+
+
+
+    function getNombreDocente()
+    {
+        return $this->nombre;
+    }
+
+
+}
+
+
 ?>
