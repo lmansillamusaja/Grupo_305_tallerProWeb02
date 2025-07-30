@@ -26,6 +26,9 @@ $productos = (new ProductoControler() )->listarProductos();
         <td>
              <a href="index.php?accion=editar&id=<?= $p->getProductID(); ?>">Editar</a>
         </td>
+        <td>
+             <a href="index.php?accion=Eliminar&id=<?= $p->getProductID(); ?>">Eliminar</a>
+        </td>
      
     </tr>
     <?php endforeach; ?>
